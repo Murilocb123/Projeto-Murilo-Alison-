@@ -1,0 +1,19 @@
+CREATE DATABASE "Agendamento"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+Create Table USU_Usuario(
+	USU_UsuarioID 			integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+	USU_UsuarioNome 		Varchar(255) NOT NULL,
+	USU_UsuarioSobrenome	VARCHAR(255) NOT NULL,
+	PRIMARY KEY (USU_UsuarioID)
+);
+
+
+INSERT INTO USU_Usuario(USU_UsuarioNome, USU_UsuarioSobrenome)
+VALUES('Murilo', 'Costa Bittencourt');
